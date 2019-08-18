@@ -2,8 +2,8 @@ import React from "react";
 import AuthorCard from "./AuthorCard";
 
 function AuthorList(props) {
-  const AuthorArray = props.authors.map(author => {
-    return <AuthorCard key={author.first_name} author={author} />;
+  const AuthorArray = props.authors.map((author, i) => {
+    return <AuthorCard key={i} author={author} />;
   });
   return (
     <div className="authors">
